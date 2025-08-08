@@ -10,8 +10,8 @@ const Home = () => {
                     </div>
                 </div>
                 <footer className="mb-4 flex justify-around">
-                    <a href="https://github.com/pedroafmonteiro" className="text-gray-400">GitHub</a>
-                    <a href="https://linkedin.com/in/pedro10monteiro" className="text-gray-400">Linkedin</a>
+                    <a href="https://github.com/pedroafmonteiro" className="text-gray-400 select-none">GitHub</a>
+                    <a href="https://linkedin.com/in/pedro10monteiro" className="text-gray-400 select-none">Linkedin</a>
                 </footer>
             </main>
         </>
