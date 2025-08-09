@@ -7,17 +7,13 @@
   --font-mono: "Google Sans Code", monospace;
 }
 
-html {
-  background-color: #101010;
-}
-
-/* Mobile-safe 100vh variable */
 :root {
+  background-color: #101010;
   --vh: 100vh;
 }
 
 @media (max-width: 600px) {
   :root {
-    /* Will be updated by JS for mobile browsers */
+    background-color: #101010;
   }
 }
