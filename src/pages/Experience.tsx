@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 const Experience = () => {
   const [entered, setEntered] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    setEntered(true);
-  }, []);
+    setEntered(false);
+    const timeout = setTimeout(() => setEntered(true), 10);
+    return () => clearTimeout(timeout);
+  }, [location.pathname]);
 
   return (
     <>
