@@ -6,10 +6,14 @@ import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import "./index.css";
+import NavBar from "./components/NavBar/NavBar";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
+      <div className="fixed w-full z-1 flex justify-center">
+        <NavBar />
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
