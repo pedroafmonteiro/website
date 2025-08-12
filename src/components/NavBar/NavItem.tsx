@@ -13,7 +13,7 @@ const NavItem = ({
     <NavLink
       to={route}
       className={({ isActive }) =>
-        ["rounded-lg", isActive ? "bg-neutral-800" : ""].join(" ")
+        ["rounded-lg transition-all duration-200", isActive ? "bg-neutral-800 opacity-100 " : ""].join(" ")
       }
       onClick={onClick}
     >
