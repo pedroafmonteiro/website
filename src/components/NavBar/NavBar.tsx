@@ -1,9 +1,24 @@
 import NavItem from "./NavItem";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    window.history.pushState({ mobileNav: true }, "");
+    const onPopState = () => {
+      if (mobileOpen) {
+        setMobileOpen(false);
+      }
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => {
+      window.removeEventListener("popstate", onPopState);
+    };
+  }, [mobileOpen]);
+
   const navItems = [
     { label: "Home", route: "/" },
     { label: "Experience", route: "/experience" },
