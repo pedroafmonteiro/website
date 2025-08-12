@@ -20,7 +20,11 @@ const Experience = () => {
             ? "opacity-100 scale-100 pointer-events-auto"
             : "opacity-0 scale-95 translate-y-5 pointer-events-none",
         ].join(" ")}
-      ></main>
+      >
+        <div>
+          <h1 className="text-white text-4xl select-none">Work in Progress</h1>
+        </div>
+      </main>
     </>
   );
 };
