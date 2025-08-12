@@ -38,14 +38,42 @@ const NavBar = () => {
           "p-2 rounded-lg",
           "cursor-pointer",
           "transition-all duration-300",
-          mobileOpen ? "w-10" : "w-18",
-          "min-w-10",
+          "w-10",
         ].join(" ")}
         onClick={() => setMobileOpen((open) => !open)}
         aria-label="Toggle navigation menu"
       >
-        <span className="text-white text-md transition-all duration-300 select-none">
-          {mobileOpen ? "✕" : "Menu"}
+        <span
+          className={[
+            "text-white text-xl select-none",
+            "transition-transform duration-300",
+            "flex items-center justify-center",
+            "relative w-6 h-6",
+          ].join(" ")}
+          aria-hidden="true"
+        >
+          <span
+            className={[
+              "absolute inset-0 flex items-center justify-center",
+              "transition-all duration-300",
+              mobileOpen
+                ? "opacity-0 scale-90 rotate-12"
+                : "opacity-100 scale-100 rotate-0",
+            ].join(" ")}
+          >
+            ☰
+          </span>
+          <span
+            className={[
+              "absolute inset-0 flex items-center justify-center",
+              "transition-all duration-300",
+              mobileOpen
+                ? "opacity-100 scale-100 rotate-0"
+                : "opacity-0 scale-90 -rotate-12",
+            ].join(" ")}
+          >
+            ✕
+          </span>
         </span>
       </button>
 
