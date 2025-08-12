@@ -5,19 +5,30 @@
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-mono: "Google Sans Code", monospace;
+
+  --color-background: #101010;
 }
 
-html {
-  background-color: #101010;
+@layer base {
 }
 
-/* Mobile-safe 100vh variable */
 :root {
+  background: #171717;
+  background: radial-gradient(
+    circle,
+    rgba(23, 23, 23, 1) 0%,
+    rgba(16, 16, 16, 1) 100%
+  );
   --vh: 100vh;
 }
 
 @media (max-width: 600px) {
   :root {
-    /* Will be updated by JS for mobile browsers */
+    background: #171717;
+    background: radial-gradient(
+      circle,
+      rgba(23, 23, 23, 1) 0%,
+      rgba(16, 16, 16, 1) 100%
+    );
   }
 }
