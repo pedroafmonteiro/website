@@ -5,6 +5,11 @@
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-mono: "Google Sans Code", monospace;
+
+  --color-background: #101010;
+}
+
+@layer base {
 }
 
 :root {
