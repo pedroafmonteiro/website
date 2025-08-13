@@ -12,6 +12,8 @@ const Contact = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
+  const formSubmitId = import.meta.env.VITE_FORM_SUBMIT_ID;
+
   useEffect(() => {
     setEntered(false);
     const timeout = setTimeout(() => setEntered(true), 10);
@@ -25,7 +27,7 @@ const Contact = () => {
     const formData = new FormData(form);
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/99edb86320256d395a36e0be4aef6aac",
+        `https://formsubmit.co/ajax/${formSubmitId}`,
         {
           method: "POST",
           headers: {
