@@ -50,6 +50,7 @@ const Contact = () => {
       }
     } catch (error) {
       setIsError(true);
+      console.error("Error submitting form:", error);
       setTimeout(() => {
         setIsError(false);
       }, 5000);

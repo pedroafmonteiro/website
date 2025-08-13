@@ -9,7 +9,7 @@ const Button = ({
   isSuccess?: boolean;
   isError?: boolean;
 }) => {
-  let baseClass =
+  const baseClass =
     "py-2 px-4 rounded-lg transition-all transition-colors duration-200 w-full my-1.5 select-none";
   let buttonClass = `bg-neutral-200 text-neutral-900 cursor-pointer ${baseClass}`;
 
