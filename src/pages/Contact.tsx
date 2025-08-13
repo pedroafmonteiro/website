@@ -23,15 +23,20 @@ const Contact = () => {
     setIsLoading(true);
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      data[key] = value.toString();
+    });
     try {
       const response = await fetch(
         `https://formsubmit.co/ajax/99edb86320256d395a36e0be4aef6aac`,
         {
           method: "POST",
           headers: {
+            "Content-Type": "application/json",
             Accept: "application/json",
           },
-          body: formData,
+          body: JSON.stringify(data),
         },
       );
       if (response.ok) {
@@ -77,6 +82,7 @@ const Contact = () => {
         </div>
         <div className="w-full md:w-3xl px-4 mx-auto flex flex-col gap-4">
           <form className="flex flex-col items-end" onSubmit={handleSubmit}>
+            <input type="hidden" name="_captcha" value="false" />
             <TextInput
               type="text"
               label="Name"
