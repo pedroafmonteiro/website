@@ -10,8 +10,8 @@ const Button = ({
   isError?: boolean;
 }) => {
   let baseClass =
-    "py-2 px-4 rounded-lg transition-all transition-colors duration-200 w-full my-1.5";
-  let buttonClass = `bg-white text-neutral-900 cursor-pointer ${baseClass}`;
+    "py-2 px-4 rounded-lg transition-all transition-colors duration-200 w-full my-1.5 select-none";
+  let buttonClass = `bg-neutral-200 text-neutral-900 cursor-pointer ${baseClass}`;
 
   if (isSuccess) {
     buttonClass = `bg-green-600 text-green-100 cursor-default ${baseClass}`;

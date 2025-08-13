@@ -13,8 +13,8 @@ const TextArea = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col gap-2 w-full text-white py-1.5">
-        <label htmlFor={id}>{label}</label>
+      <div className="flex flex-col gap-2 w-full text-neutral-200 py-1.5">
+        <label htmlFor={id} className="select-none">{label}</label>
         <textarea
           id={id}
           name={name}
@@ -25,7 +25,7 @@ const TextArea = ({
             "p-1.5 rounded-lg",
             "focus:outline-none focus:border-white/50",
             "w-full min-h-[150px] resize-none",
-            "transition-all duration-150",
+            "transition-all duration-150 auto",
           ].join(" ")}
         />
       </div>

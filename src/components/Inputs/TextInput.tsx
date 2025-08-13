@@ -15,8 +15,8 @@ const TextInput = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col gap-2 w-full text-white py-1.5">
-        <label htmlFor={id}>{label}</label>
+      <div className="flex flex-col gap-2 w-full text-neutral-200 py-1.5">
+        <label htmlFor={id} className="select-none">{label}</label>
         <input
           type={type}
           id={id}
