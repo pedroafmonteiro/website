@@ -25,7 +25,7 @@ const TextArea = ({
             "p-1.5 rounded-lg",
             "focus:outline-none focus:border-white/50",
             "w-full min-h-[150px] resize-none",
-            "transition-all duration-150 auto",
+            "transition-all duration-150",
           ].join(" ")}
         />
       </div>
