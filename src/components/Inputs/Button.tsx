@@ -1,3 +1,5 @@
+import { CheckCircle2Icon, CircleXIcon, Loader2Icon } from "lucide-react";
+
 const Button = ({
   type,
   isLoading,
@@ -10,8 +12,8 @@ const Button = ({
   isError?: boolean;
 }) => {
   const baseClass =
-    "py-2 px-4 rounded-lg transition-all transition-colors duration-200 w-full my-1.5 select-none";
-  let buttonClass = `bg-neutral-200 text-neutral-900 cursor-pointer ${baseClass}`;
+    "py-2 px-4 rounded-lg transition-all duration-200 w-full my-1.5 select-none";
+  let buttonClass = `bg-neutral-200 hover:bg-neutral-300 text-neutral-900 cursor-pointer ${baseClass}`;
 
   if (isSuccess) {
     buttonClass = `bg-green-600 text-green-100 cursor-default ${baseClass}`;
@@ -27,13 +29,26 @@ const Button = ({
       className={buttonClass}
       disabled={isLoading || isSuccess || isError}
     >
-      {isSuccess
-        ? "Sent"
-        : isError
-          ? "Error"
-          : isLoading
-            ? "Sending..."
-            : "Send"}
+      {isSuccess ? (
+        <span className="flex items-center justify-center gap-2">
+          <CheckCircle2Icon />
+          <span>Success!</span>
+        </span>
+      ) : isError ? (
+        <span className="flex items-center justify-center gap-2">
+          <CircleXIcon />
+          <span>Error!</span>
+        </span>
+      ) : isLoading ? (
+        <>
+        <div className="flex items-center justify-center gap-2">
+          <Loader2Icon className="animate-spin" />
+          <span>Sending...</span>
+        </div>
+        </>
+      ) : (
+        "Send"
+      )}
     </button>
   );
 };

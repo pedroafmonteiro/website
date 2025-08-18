@@ -24,6 +24,7 @@ const TextArea = ({
             "bg-neutral-900 border-2 border-neutral-800 shadow-sm shadow-neutral-800",
             "p-1.5 rounded-lg",
             "focus:outline-none focus:border-white/50",
+            "hover:border-white/20",
             "w-full min-h-[150px] resize-none",
             "transition-all duration-150",
           ].join(" ")}

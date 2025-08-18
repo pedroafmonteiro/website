@@ -67,21 +67,21 @@ const Contact = () => {
     <>
       <main
         className={[
-          "flex flex-col gap-4 md:gap-0 md:grid md:grid-cols-2 items-center justify-center min-h-screen w-full transition-all duration-400",
+          "flex flex-col gap-4 items-center justify-center min-h-screen w-full transition-all duration-400",
           entered
             ? "opacity-100 scale-100 pointer-events-auto"
             : "opacity-0 scale-95 translate-y-5 pointer-events-none",
         ].join(" ")}
       >
-        <div className="md:w-lg px-4 mx-auto flex flex-col gap-4">
-          <h1 className="text-neutral-200 text-4xl select-none">Contact me</h1>
+        <div className="flex flex-col gap-2 px-4 w-full md:w-3xl transition-all duration-400">
+          <h1 className="text-neutral-200 text-4xl">Contact me</h1>
           <p className="text-neutral-400 text-base">
             If you have any questions, want to collaborate, or just say hi, feel
             free to reach out!
           </p>
         </div>
-        <div className="w-full md:w-3xl px-4 mx-auto flex flex-col gap-4">
-          <form className="flex flex-col items-end" onSubmit={handleSubmit}>
+        <div className="px-4 w-full md:w-3xl transition-all duration-400">
+          <form onSubmit={handleSubmit}>
             <input type="hidden" name="_captcha" value="false" />
             <TextInput
               type="text"
@@ -105,7 +105,7 @@ const Contact = () => {
               required
             />
             <TextArea label="Message" id="message" name="message" required />
-            <div className="flex w-full md:w-[150px]">
+            <div className="mt-2">
               <Button
                 type="submit"
                 isLoading={isLoading}
