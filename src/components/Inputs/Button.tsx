@@ -2,11 +2,19 @@ import { CheckCircle2Icon, CircleXIcon, Loader2Icon } from "lucide-react";
 
 const Button = ({
   type,
+  baseText,
+  loadingText,
+  successText,
+  errorText,
   isLoading,
   isSuccess,
   isError,
 }: {
   type: "button" | "submit" | "reset";
+  baseText?: string;
+  loadingText?: string;
+  successText?: string;
+  errorText?: string;
   isLoading?: boolean;
   isSuccess?: boolean;
   isError?: boolean;
@@ -32,22 +40,22 @@ const Button = ({
       {isSuccess ? (
         <span className="flex items-center justify-center gap-2">
           <CheckCircle2Icon />
-          <span>Success!</span>
+          <span>{successText}</span>
         </span>
       ) : isError ? (
         <span className="flex items-center justify-center gap-2">
           <CircleXIcon />
-          <span>Error!</span>
+          <span>{errorText}</span>
         </span>
       ) : isLoading ? (
         <>
         <div className="flex items-center justify-center gap-2">
           <Loader2Icon className="animate-spin" />
-          <span>Sending...</span>
+          <span>{loadingText}</span>
         </div>
         </>
       ) : (
-        "Send"
+        <span>{baseText}</span>
       )}
     </button>
   );

@@ -108,6 +108,10 @@ const Contact = () => {
             <div className="mt-2">
               <Button
                 type="submit"
+                baseText="Send"
+                loadingText="Sending..."
+                successText="Sent!"
+                errorText="Error!"
                 isLoading={isLoading}
                 isSuccess={isSuccess}
                 isError={isError}
