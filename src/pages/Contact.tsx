@@ -73,14 +73,14 @@ const Contact = () => {
             : "opacity-0 scale-95 translate-y-5 pointer-events-none",
         ].join(" ")}
       >
-        <div className="flex flex-col gap-2 px-4 w-full md:w-3xl transition-all duration-400">
-          <h1 className="text-neutral-200 text-4xl">Contact me</h1>
-          <p className="text-neutral-400 text-base">
-            If you have any questions, want to collaborate, or just say hi, feel
-            free to reach out!
-          </p>
-        </div>
-        <div className="px-4 w-full md:w-3xl transition-all duration-400">
+        <div className="p-4 md:w-3xl space-y-4">
+          <header className="flex flex-col gap-2">
+            <h1 className="text-neutral-200 text-4xl">Contact me</h1>
+            <p className="text-neutral-400 text-base">
+              If you have any questions, want to collaborate, or just say hi,
+              feel free to reach out!
+            </p>
+          </header>
           <form onSubmit={handleSubmit}>
             <input type="hidden" name="_captcha" value="false" />
             <TextInput

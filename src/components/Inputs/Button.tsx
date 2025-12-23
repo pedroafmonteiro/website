@@ -1,7 +1,8 @@
 import { CheckCircle2Icon, CircleXIcon, Loader2Icon } from "lucide-react";
 
 const Button = ({
-  type,
+  type = "button",
+  width = "w-full",
   baseText,
   loadingText,
   successText,
@@ -10,7 +11,8 @@ const Button = ({
   isSuccess,
   isError,
 }: {
-  type: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "reset";
+  width?: string;
   baseText?: string;
   loadingText?: string;
   successText?: string;
@@ -20,7 +22,7 @@ const Button = ({
   isError?: boolean;
 }) => {
   const baseClass =
-    "py-2 px-4 rounded-lg transition-all duration-200 w-full my-1.5 select-none";
+    "py-2 px-4 rounded-lg transition-all duration-200 select-none " + width;
   let buttonClass = `bg-neutral-200 hover:bg-neutral-300 text-neutral-900 cursor-pointer ${baseClass}`;
 
   if (isSuccess) {
