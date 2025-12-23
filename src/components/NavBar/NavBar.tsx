@@ -103,7 +103,7 @@ const NavBar = () => {
 
           <li className="rounded-lg transition-all duration-200 p-2 hover:bg-neutral-800 cursor-pointer">
             <a
-              href="/Pedro_Monteiro_Resume.pdf"
+              href="/resume.html"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
@@ -139,7 +139,7 @@ const NavBar = () => {
         >
           <div className="rounded-lg transition-all duration-200 p-2 hover:bg-neutral-800 cursor-pointer">
             <a
-              href="/Pedro_Monteiro_Resume.pdf"
+              href="/resume.html"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white select-none text-2xl md:text-base"
