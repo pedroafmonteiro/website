@@ -23,7 +23,7 @@ const Home = () => {
       <div>
         <h1 className="text-white text-4xl select-none">Pedro Monteiro</h1>
         <h2 className="text-gray-400 text-2xl select-none text-start">
-          Frontend Developer
+          Full Stack Developer
         </h2>
       </div>
       <footer className="fixed bottom-0 left-0 w-full flex justify-center gap-8 mb-4">
