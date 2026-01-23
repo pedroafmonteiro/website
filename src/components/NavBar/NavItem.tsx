@@ -10,24 +10,24 @@ const NavItem = ({
   onClick?: () => void;
 }) => {
   return (
-    <NavLink
-      to={route}
-      className={({ isActive }) =>
-        ["rounded-lg transition-all duration-200", isActive ? "bg-neutral-800 opacity-100 " : ""].join(" ")
-      }
-      onClick={onClick}
-    >
-      <li
-        className={[
-          "p-2 rounded-lg",
-          "hover:bg-neutral-800",
-          "cursor-pointer",
-          "transition-colors duration-200",
-        ].join(" ")}
+    <li>
+      <NavLink
+        to={route}
+        className={({ isActive }) =>
+          [
+            "rounded-lg transition-all duration-200",
+            "p-2 block",
+            "hover:bg-neutral-800",
+            "cursor-pointer",
+            "transition-colors duration-200",
+            isActive ? "bg-neutral-800 opacity-100 " : "",
+          ].join(" ")
+        }
+        onClick={onClick}
       >
         <p className="text-white select-none text-2xl md:text-base">{label}</p>
-      </li>
-    </NavLink>
+      </NavLink>
+    </li>
   );
 };
 

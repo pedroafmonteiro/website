@@ -99,7 +99,9 @@ const NavBar = () => {
             />
           ))}
 
-          <hr className="w-1/2 border-t border-neutral-800" />
+          <li className="w-full flex justify-center">
+            <hr className="w-1/2 border-t border-neutral-800" />
+          </li>
 
           <li className="rounded-lg transition-all duration-200 p-2 hover:bg-neutral-800 cursor-pointer">
             <a
