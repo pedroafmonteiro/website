@@ -1,5 +1,4 @@
 import { GlobeIcon } from "lucide-react";
-import Button from "./Inputs/Button";
 
 const InformationCard = ({
   title,
@@ -39,7 +38,6 @@ const InformationCard = ({
           <GlobeIcon className="w-5 h-5" />
           <span className="text-sm">{websiteLabel}</span>
         </a>
-        <Button type="button" width="w-fit" baseText="View details" />
       </footer>
     </article>
   );

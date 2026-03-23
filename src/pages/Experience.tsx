@@ -46,7 +46,7 @@ const Experience = () => {
     <>
       <main
         className={[
-          "flex flex-col gap-4 items-center justify-center min-h-screen w-full transition-all duration-400",
+          "flex flex-col gap-4 items-center justify-center min-h-screen w-full transition-all duration-400 md:pt-24",
           entered
             ? "opacity-100 scale-100 pointer-events-auto"
             : "opacity-0 scale-95 translate-y-5 pointer-events-none",
